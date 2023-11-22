@@ -18,6 +18,10 @@ Install the requirements.
 
     pip install -r requirements.txt
 
+## Joe Sandbox Setup
+
+Generate an API Key in `User Settings` - `API key` and copy it to `jbxAPIKey` in [connectory.py](connector.py)
+
 ## Microsoft Defender for Endpoint Setup
 
 ### Creating Application for API Access
@@ -27,7 +31,7 @@ Install the requirements.
 
 ![1](img/app.png)
 
-- Click `New registration button`, enter the name `Joe Sandbox Sync` and click register
+- Click `New registration button`, enter the name `Joe Sandbox Sync` and click `register`
 - Copy the `Applicatin (client) ID` and `Directory (tenant) ID` to `msClientId` and `msTenantId` in [connectory.py](connector.py)
 
 ![2](img/tenantid.png)
