@@ -43,21 +43,32 @@ Generate an API Key in `User Settings` - `API key` and copy it to `jbxAPIKey` in
 
 - Choose `APIs my organization uses` and then type `WindowsDefenderATP`
 
-![3](img/permissions1.png)
+![4](img/permissions1.png)
 
-- Select `Applicaiton Permission`
+- Select `Application Permission`
 
-![3](img/permissions2.png)
+![5](img/permissions2.png)
 
 - Add `Alert.Read.All`, `Alert.ReadWrite.All` and click `Add permission`
 
-![3](img/permissions3.png)
+![6](img/permissions3.png)
 
 - Goto `Certificates and secrets`
 - Click `New client secret`
 - Copy `Value` to `msAppSecret` in  [connectory.py](connector.py)
 
-![3](img/clientsecret.png)
+![7](img/clientsecret.png)
 
 - Finally goto `API Permissions` again and click `Grant admin consens` for all permissions
 
+# Running the Connector
+
+## Running with CLI
+
+Simply start the connector via cmdline. You likely want to add it crontab to run it regularly. Adjust the `timeSpan` in [connectory.py](connector.py) to change the search span of alerts.
+    
+    python connector.py
+
+If matching Joe Sandbox analysis for Microsoft Defender alerts are found a new comment is added to the Alert:
+
+![8](img/comment.png)
