@@ -37,11 +37,11 @@ Install the requirements.
 ![3](img/apipermissions.png)
 
 
-- Type `WindowsDefenderATP`
+- Choose `APIs my organization uses` and then type `WindowsDefenderATP`
 
 ![3](img/permissions1.png)
 
-- Choose `APIs my organization uses`
+- Select `Applicaiton Permission`
 
 ![3](img/permissions2.png)
 
