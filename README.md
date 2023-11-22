@@ -26,3 +26,34 @@ Install the requirements.
 - Click `App registrations`
 
 ![1](img/app.png)
+
+- Click `New registration button`, enter the name `Joe Sandbox Sync` and click register
+- Copy the `Applicatin (client) ID` and `Directory (tenant) ID` to `msClientId` and `msTenantId` in [connectory.py](connector.py)
+
+![2](img/tenantid.png)
+
+- Now we need to grant permissions to the App. Click on `API permissions` then `Add a permission`
+
+![3](img/apipermissions.png)
+
+- Choose `APIs my organization uses`
+- Type `WindowsDefenderATP`
+
+![3](img/permissions1.png)
+
+- Select `Application Permission`
+
+![3](img/permissions2.png)
+
+- Add `Alert.Read.All`, `Alert.ReadWrite.All` and click `Add permission`
+
+![3](img/permissions3.png)
+
+- Goto `Certificates and secrets`
+- Click `New client secret`
+- Copy `Value` to `msAppSecret` in  [connectory.py](connector.py)
+
+![3](img/clientsecret.png)
+
+- Finally goto `API Permissions` again and click `Grant admin consens` for all permissions
+
