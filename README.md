@@ -1,8 +1,7 @@
 ![Integration logo](img/integration.png)
 
 # Joe-Sandbox-Microsoft-Defender-Connector
-This script will enrich your Microsoft Defender Alerts with Joe Sandbox analysis data (Score, Detection, Threatname and link to the analysis).
-
+This script will enrich your Microsoft Defender Alerts with Joe Sandbox analysis data (Score, Detection, Threatname and a link to the full analysis)
 ## Requirements
 - Python 3.x with required packages ([Required Packages](requirements.txt))
 - Microsoft Defender for Endpoint
@@ -26,7 +25,7 @@ Generate an API Key in `User Settings` - `API key` and copy it to `jbxAPIKey` in
 
 ### Creating Application for API Access
 
-- Open [https://portal.azure.com/](https://portal.azure.com) and `Microsoft Entra ID` service
+- Open [https://portal.azure.com/](https://portal.azure.com) and click on `Microsoft Entra ID` 
 - Click `App registrations`
 
 ![1](img/app.png)
@@ -69,6 +68,6 @@ Simply start the connector via cmdline. You likely want to add it crontab to run
     
     python connector.py
 
-If matching Joe Sandbox analysis for Microsoft Defender alerts are found a new comment is added to the Alert:
+If the connector finds Joe Sandbox analyses which match Microsoft Defender alerts then a new comment is added:
 
 ![8](img/comment.png)
