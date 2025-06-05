@@ -3,6 +3,7 @@
 
 # Joe-Sandbox-Microsoft-Defender-Connector
 This integration is DEPRECATED. We recommend using instead the new serverless integration on Azure: https://github.com/joesecurity/ms-defender-azure.
+
 This script will enrich your Microsoft Defender Alerts with Joe Sandbox analysis data (Score, Detection, Threatname and a link to the full analysis)
 
 ## Requirements
